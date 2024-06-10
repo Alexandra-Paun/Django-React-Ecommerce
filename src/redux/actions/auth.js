@@ -88,12 +88,12 @@ export const signup = (first_name, last_name, email, password, re_password) => a
                 type: SIGNUP_SUCCESS,
                 payload: res.data
             });
-            dispatch(setAlert('Te enviamos un correo, por favor activa tu cuenta. Revisa el correo de spam','green'))
+            dispatch(setAlert('We sent you an email, please activate your account. Check your spam mail','green'))
         } else {
             dispatch({
                 type: SIGNUP_FAIL
             });
-            dispatch(setAlert('Error al crear cuenta', 'red'));
+            dispatch(setAlert('Error creating account', 'red'));
         }
         dispatch({
             type: REMOVE_AUTH_LOADING
@@ -105,7 +105,7 @@ export const signup = (first_name, last_name, email, password, re_password) => a
         dispatch({
             type: REMOVE_AUTH_LOADING
         });
-        dispatch(setAlert('Error conectando con el servidor, intenta mas tarde.', 'red'));
+        dispatch(setAlert('Error connecting to the server, please try again later.', 'red'));
     }
 };
 
@@ -172,7 +172,7 @@ export const login = (email, password) => async dispatch => {
             dispatch({
                 type: REMOVE_AUTH_LOADING
             });
-            dispatch(setAlert('Inicio de sesión con éxito', 'green'));
+            dispatch(setAlert('Login successful', 'green'));
         } else {
             dispatch({
                 type: LOGIN_FAIL
@@ -180,7 +180,7 @@ export const login = (email, password) => async dispatch => {
             dispatch({
                 type: REMOVE_AUTH_LOADING
             });
-            dispatch(setAlert('Error al iniciar sesion.', 'red'));
+            dispatch(setAlert('Failed to login.', 'red'));
         }
     }
     catch(err){
@@ -190,7 +190,7 @@ export const login = (email, password) => async dispatch => {
         dispatch({
             type: REMOVE_AUTH_LOADING
         });
-        dispatch(setAlert('Error al iniciar sesion. Intenta mas tarde', 'red'));
+        dispatch(setAlert('Error logging in. Please try again later', 'red'));
     }
 }
 
@@ -217,12 +217,12 @@ export const activate = (uid, token) => async dispatch => {
             dispatch({
                 type: ACTIVATION_SUCCESS
             });
-             dispatch(setAlert('Cuenta activada correctamente', 'green'));
+             dispatch(setAlert('Account activated successfully', 'green'));
         } else {
             dispatch({
                 type: ACTIVATION_FAIL
             });
-             dispatch(setAlert('Error activando cuenta', 'red'));
+             dispatch(setAlert('Error activating account', 'red'));
         }
         dispatch({
             type: REMOVE_AUTH_LOADING
@@ -235,7 +235,7 @@ export const activate = (uid, token) => async dispatch => {
         dispatch({
             type: REMOVE_AUTH_LOADING
         });
-         dispatch(setAlert('Error al conectar con el servidor, intenta mas tarde.', 'red'));
+         dispatch(setAlert('Error connecting to the server, please try again later.', 'red'));
     }
 };
 
