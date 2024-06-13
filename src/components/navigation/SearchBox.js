@@ -41,7 +41,7 @@ const SearchBox = ({
                         value={search}
                         required
                         className="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-2 sm:text-sm border-gray-300"
-                        placeholder="Que buscas hoy?"
+                        placeholder="What are you looking for today?"
                     />
                   </div>
 

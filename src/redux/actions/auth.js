@@ -217,6 +217,7 @@ export const activate = (uid, token) => async dispatch => {
             dispatch({
                 type: ACTIVATION_SUCCESS
             });
+            
              dispatch(setAlert('Account activated successfully', 'green'));
         } else {
             dispatch({
@@ -360,6 +361,7 @@ export const reset_password_confirm = (uid, token, new_password, re_new_password
                     type: REMOVE_AUTH_LOADING
                 });
                 dispatch(setAlert('Password has been reset successfully', 'green'));
+                
             } else {
                 dispatch({
                     type: RESET_PASSWORD_CONFIRM_FAIL

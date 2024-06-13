@@ -36,7 +36,7 @@ const Signup = ({
     e.preventDefault();
     console.log(formData)
     signup(first_name, last_name, email, password, re_password);
-     setAccountCreated(true);
+    setAccountCreated(true);
     // window.scrollTo(0,0)
   }
 
